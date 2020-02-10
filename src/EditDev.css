@@ -1,0 +1,75 @@
+body{
+  background:#7d40e7 ;
+}
+edit{
+  width: 320px;
+  background: #fff;
+  box-shadow:5px 5px 14px 5px rgba(69, 35, 88, 0.5);
+  border-radius: 20px;
+  padding: 30px 20px;
+  margin: auto;
+  margin-top: 150px;
+  display: flex;
+  flex: 1;
+}
+
+edit strong{
+  font-size: 20px;
+  text-align: center;
+  display: block;
+  color: #333;
+}
+
+edit form{
+  margin-top: 30px;
+}
+
+edit form .input-block label{
+  color: #ACACAC;
+  font-size: 14px;
+  font-weight: bold;
+  display: block;
+}
+
+edit form .input-block input {
+  width: 100%;
+  height: 32px;
+  font-size: 14px;
+  color: #666;
+  border: 0;
+  border-bottom: 1px solid #eee;
+}
+
+edit form button[type=submit] {
+  width: 100%;
+  border: 0;
+  margin-top: 30px;
+  background:rgb(165, 92, 165) ;
+  border-radius: 2px;
+  padding: 15px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  cursor: pointer;
+  transition: linear 0.5s;
+}
+
+edit form button[type=submit]:hover{
+  background:rgb(83, 34, 83);
+}
+
+edit form .input-block + .input-block {
+  margin-top: 20px;
+}
+
+edit form .input-group {
+  margin-top: 20px;
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 1fr 1fr;
+}
+
+edit form .input-group .input-block {
+  margin-top:0;
+}
+
