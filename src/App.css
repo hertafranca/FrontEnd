@@ -1,4 +1,8 @@
 #app {
+    background: rgb(179, 161, 179);
+    -webkit-font-smoothing: antialiased;
+}
+#app {
     max-width: 1200;
     margin: 0 auto;
     padding: 60px 30px;

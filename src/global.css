@@ -7,15 +7,10 @@
     box-sizing: border-box;
 }
 
-html, body, #root {
+html,#root {
     height: 100; 
 }
 
-body{
-    background: rgb(179, 161, 179);
-    -webkit-font-smoothing: antialiased;
-}
-
-body, input, button {
-font-family: roboto, sans-serif;
+body,input, button {
+    font-family: roboto, sans-serif;
 }
