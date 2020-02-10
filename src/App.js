@@ -8,7 +8,7 @@ import './Main.css';
 
 import DevForm from './components/DevForm';
 import DevItem from './components/DevItem';
-function App() {
+function App({ history }) {
   const [devs, setDevs] = useState([]);
  
   useEffect(() => {
@@ -28,6 +28,16 @@ function App() {
     setDevs([...devs,response.data]);
   }
 
+  async function deleteDev(id) {
+    try {
+      await api.delete(`/devs/${id}`);
+      const devsList = devs.filter(dev => dev._id != id);
+      setDevs(devsList);
+    } catch (error) {
+     console.log(error); 
+    }
+  }
+
   return (
    <div id="app">
      <aside>
@@ -38,7 +48,7 @@ function App() {
      <main>
       <ul>
         {devs.map(dev =>(
-          <DevItem key={dev._id} dev={dev} />
+          <DevItem key={dev._id} dev={dev} onClick={() => deleteDev(dev._id)} history={history} />
         ))}
       </ul>
      </main>
